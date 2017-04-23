@@ -159,6 +159,9 @@ module.exports.create = function (options) {
         cOptions.jsonRefs = {};
       }
 
+      // allow resolution to create circular documents
+      cOptions.jsonRefs.allowCircular = true;
+
       // Include invalid reference information
       cOptions.jsonRefs.includeInvalid = true;
 
